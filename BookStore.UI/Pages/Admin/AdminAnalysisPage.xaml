@@ -1,0 +1,120 @@
+﻿<ps:BasePage x:Class="BookStore.UI.Pages.Admin.AdminAnalysisPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=DotNetProjects.DataVisualization.Toolkit"
+             xmlns:local="clr-namespace:BookStore.UI.Pages.Admin"
+             xmlns:ps="clr-namespace:BookStore.UI.Pages"
+             mc:Ignorable="d"
+             Title="AdminAnalysisPage" d:DesignHeight="600" d:DesignWidth="1000">
+    <ps:BasePage.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Century" />
+        </Style>
+    </ps:BasePage.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer.Background>
+            <SolidColorBrush Color="White" Opacity="0.8" />
+        </ScrollViewer.Background>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center"
+                       FontSize="30" Margin="20">
+                Статистические данные
+            </TextBlock>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="30">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Количество зарегистрированных пользователей: " />
+                        <TextBlock Text="{Binding Path=AccountsCount, Mode=OneWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Количество книг: " />
+                        <TextBlock Text="{Binding Path=BooksCount, Mode=OneWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Среднее кол-во книг на одну учётную запись: " />
+                        <TextBlock Text="{Binding Path=AverageBooksCount, Mode=OneWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 0">
+                        <TextBlock Text="Кол-во книг в корзинах: " />
+                        <TextBlock Text="{Binding Path=CartBooksCount, Mode=OneWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Среднее кол-во книг в корзине: " />
+                        <TextBlock Text="{Binding Path=AverageCartBooksCount, Mode=OneWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0, 20, 0, 0">
+                        <TextBlock Text="Количество заказов: " />
+                        <TextBlock Text="{Binding Path=OrdersCount, Mode=OneWay}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Среднее кол-во заказов на пользователя: " />
+                        <TextBlock Text="{Binding Path=AverageOrdersCount, Mode=OneWay}" />
+                    </StackPanel>
+                </StackPanel>
+
+                <chartingToolkit:Chart Grid.Row="1" Margin="30" MinHeight="250"
+                                       Title="Прибыль за год, р.">
+                    <chartingToolkit:Chart.TitleStyle>
+                        <Style TargetType="Control">
+                            <Setter Property="FontSize" Value="24" />
+                            <Setter Property="FontFamily" Value="Century" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </chartingToolkit:Chart.TitleStyle>
+                    <chartingToolkit:ColumnSeries ItemsSource="{Binding DataChartTotalPrices}"
+                                                  DependentValuePath="Value" IndependentValuePath="Label" />
+                    <chartingToolkit:Chart.LegendStyle>
+                        <Style TargetType="Control">
+                            <Setter Property="Width" Value="0" />
+                            <Setter Property="Height" Value="0" />
+                        </Style>
+                    </chartingToolkit:Chart.LegendStyle>
+                </chartingToolkit:Chart>
+
+                <chartingToolkit:Chart Grid.Row="2" Margin="30" MinHeight="250"
+                                       Title="Кол-во купленных книг за год">
+                    <chartingToolkit:Chart.TitleStyle>
+                        <Style TargetType="Control">
+                            <Setter Property="FontSize" Value="24" />
+                            <Setter Property="FontFamily" Value="Century" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </chartingToolkit:Chart.TitleStyle>
+                    <chartingToolkit:ColumnSeries ItemsSource="{Binding DataChartTotalCounts}"
+                                                  DependentValuePath="Value" IndependentValuePath="Label" />
+                    <chartingToolkit:Chart.LegendStyle>
+                        <Style TargetType="Control">
+                            <Setter Property="Width" Value="0" />
+                            <Setter Property="Height" Value="0" />
+                        </Style>
+                    </chartingToolkit:Chart.LegendStyle>
+                </chartingToolkit:Chart>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</ps:BasePage>

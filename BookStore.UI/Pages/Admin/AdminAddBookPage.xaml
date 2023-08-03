@@ -1,0 +1,120 @@
+﻿<ps:BasePage x:Class="BookStore.UI.Pages.Admin.AdminAddBookPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ps="clr-namespace:BookStore.UI.Pages"
+             xmlns:local="clr-namespace:BookStore.UI.Pages.Admin"
+             mc:Ignorable="d"
+             Title="AdminAddBookPage" d:DesignHeight="800" d:DesignWidth="1000">
+    <ps:BasePage.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Century" />
+        </Style>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Century" />
+        </Style>
+        
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Century" />
+        </Style>
+    </ps:BasePage.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer.Background>
+            <SolidColorBrush Color="White" Opacity="0.8" />
+        </ScrollViewer.Background>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center"
+                       FontSize="30" Margin="20">
+                Добавление новой книги
+            </TextBlock>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0">Название:</TextBlock>
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <TextBox x:Name="NameTb" MinWidth="350" MaxWidth="350" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="1" Grid.Column="0">Автор:</TextBlock>
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <TextBox x:Name="AuthorTb" MinWidth="350" MaxWidth="350" />
+                </StackPanel>
+                
+                <TextBlock Grid.Row="2" Grid.Column="0">Категория:</TextBlock>
+                <StackPanel Grid.Row="2" Grid.Column="1">
+                    <ComboBox x:Name="CategoryTb" ItemsSource="{StaticResource BookCategoryItems}"
+                              Width="350" SelectedIndex="0" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="3" Grid.Column="0">ISBN:</TextBlock>
+                <StackPanel Grid.Row="3" Grid.Column="1">
+                    <TextBox x:Name="IsbnTb" MinWidth="350" MaxWidth="350" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="4" Grid.Column="0">Количество:</TextBlock>
+                <StackPanel Grid.Row="4" Grid.Column="1">
+                    <TextBox x:Name="CountTb" MinWidth="100" MaxWidth="200" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="5" Grid.Column="0">Цена:</TextBlock>
+                <StackPanel Grid.Row="5" Grid.Column="1">
+                    <TextBox x:Name="PriceTb" MinWidth="100" MaxWidth="100" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="6" Grid.Column="0">Описание:</TextBlock>
+                <StackPanel Grid.Row="6" Grid.Column="1">
+                    <TextBox x:Name="DescriptionTb" SpellCheck.IsEnabled="True" Language="ru-ru"
+                             TextWrapping="Wrap" AcceptsReturn="True" Height="100" Width="400"
+                             MaxHeight="100" MaxWidth="400" FontSize="14" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="7" Grid.Column="0" VerticalAlignment="Top">Фотография:</TextBlock>
+                <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="Выбрать фото" Margin="5" VerticalAlignment="Top" Click="SelectPhotoBtn_Click" />
+                    <Image x:Name="BookImage" Margin="5" Width="200" Height="200" />
+                </StackPanel>
+
+                <Button Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Click="SaveBtn_Click"
+                        HorizontalAlignment="Center" Width="300">Сохранить</Button>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</ps:BasePage>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.UI", "BookStore.UI\BookStore.UI.csproj", "{07350B7F-333C-454F-B359-C2F5C51BACC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Storage", "BookStore.Storage\BookStore.Storage.csproj", "{F95A1F72-0E1D-483B-B937-7CAF51CA6414}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07350B7F-333C-454F-B359-C2F5C51BACC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07350B7F-333C-454F-B359-C2F5C51BACC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07350B7F-333C-454F-B359-C2F5C51BACC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07350B7F-333C-454F-B359-C2F5C51BACC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95A1F72-0E1D-483B-B937-7CAF51CA6414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95A1F72-0E1D-483B-B937-7CAF51CA6414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95A1F72-0E1D-483B-B937-7CAF51CA6414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95A1F72-0E1D-483B-B937-7CAF51CA6414}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

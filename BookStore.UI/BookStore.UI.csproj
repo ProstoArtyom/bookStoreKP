@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>Resourses\Icons\main.ico</ApplicationIcon>
+ 	<Company>BelKniga App</Company>
+  	<Authors>Shashok Artyom 54TP</Authors>
+  	<Description>Курсовой проект "BelKniga" на тему "Книжный магазин"</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Models\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Properties\Settings.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Settings.settings</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Properties\Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BookStore.Storage\BookStore.Storage.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resourses\Images\brick-background.png" />
+      <Resource Include="Resourses\Images\brick-background.png" />
+      <None Remove="Resourses\Icons\main.ico" />
+      <Resource Include="Resourses\Icons\main.ico" />
+      <None Remove="Resourses\Icons\books.png" />
+      <Resource Include="Resourses\Icons\books.png" />
+      <None Remove="Resourses\Icons\home.png" />
+      <Resource Include="Resourses\Icons\home.png" />
+      <None Remove="Resourses\Icons\cart.png" />
+      <None Remove="Resourses\Icons\profile.png" />
+      <Resource Include="Resourses\Icons\profile.png" />
+      <Resource Include="Resourses\Icons\cart.png" />
+      <None Remove="Resourses\Icons\output-onlinepngtools(3).png" />
+      <Resource Include="Resourses\Icons\orders.png" />
+      <None Remove="Resourses\Icons\analysis.png" />
+      <Resource Include="Resourses\Icons\analysis.png" />
+      <None Remove="Resourses\Icons\book.png" />
+      <Resource Include="Resourses\Icons\book.png" />
+      <None Remove="Resourses\Icons\plus.png" />
+      <Resource Include="Resourses\Icons\plus.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+      <PackageReference Include="DotNetProjects.WpfToolkit.DataVisualization" Version="6.1.94" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Pages\Admin\AdminAuthPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+</Project>

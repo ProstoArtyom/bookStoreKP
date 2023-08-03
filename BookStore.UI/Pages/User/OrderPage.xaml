@@ -1,0 +1,157 @@
+﻿<ps:BasePage x:Class="BookStore.UI.Pages.User.OrderPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BookStore.UI.Pages.User"
+             xmlns:ps="clr-namespace:BookStore.UI.Pages"
+             mc:Ignorable="d"
+             Title="OrderPage" d:DesignHeight="600" d:DesignWidth="1000">
+    <ps:BasePage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Background" Value="CornflowerBlue"/>
+            <Setter Property="Foreground" Value="GhostWhite"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily" Value="Ink Free"/>
+                    
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Style.Resources>
+        </Style>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Century"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </ps:BasePage.Resources>
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer.Background>
+            <SolidColorBrush Color="White" Opacity="0.8" />
+        </ScrollViewer.Background>
+        
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" HorizontalAlignment="Left" 
+                    Width="150" Click="BackBtn_Click">НАЗАД</Button>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Width="200" Click="ExportBtn_Click">ЭКСПОРТ В .txt</Button>
+                <Button Width="150" Click="PrintBtn_Click">ПЕЧАТЬ</Button>
+            </StackPanel>
+
+            <Grid Grid.Row="1" Margin="10" x:Name="OrderGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1" x:Name="OrderInfoPanel">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Заказ № " FontSize="22" />
+                        <TextBlock Text="{Binding Id}" FontSize="22" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Статус: " FontSize="22" />
+                        <TextBlock Text="{Binding Status}" FontSize="22" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Способ оплаты: " FontSize="22" />
+                        <TextBlock Text="{Binding Payment}" FontSize="22" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0, 25, 0, 0">
+                        <TextBlock Text="Дата создания: " FontSize="22" />
+                        <TextBlock Text="{Binding DateTimeCreated}" FontSize="22" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Цена: " FontSize="22" />
+                        <TextBlock Text="{Binding Price}" FontSize="22" />
+                        <TextBlock Text="р. " FontSize="22" />
+                    </StackPanel>
+                </StackPanel>
+
+                <DataGrid Grid.Row="1" Grid.ColumnSpan="2" 
+                          Margin="0, 10, 0, 10" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          x:Name="BooksGridView" AutoGenerateColumns="False" 
+                          MouseDoubleClick="ProductsDataGrid_OnMouseDoubleClick"
+                          IsReadOnly="True" ColumnWidth="*" ItemsSource="{Binding Books}"
+                          RowBackground="Transparent" BorderBrush="Transparent"
+                          HorizontalGridLinesBrush="DimGray" VerticalGridLinesBrush="Gray"
+                          FontSize="16" Background="Transparent" >
+                    <DataGrid.RowHeaderStyle>
+                        <Style TargetType="DataGridRowHeader">
+                            <Setter Property="Background" Value="DimGray" />
+                            <Setter Property="Foreground" Value="Black" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="Padding" Value="5" />
+                        </Style>
+                    </DataGrid.RowHeaderStyle>
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="DimGray" />
+                            <Setter Property="Foreground" Value="GhostWhite" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="FontFamily" Value="Century Gothic" />
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGridCell">
+                                        <Border Padding="{TemplateBinding Padding}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                SnapsToDevicePixels="True">
+                                            <ContentPresenter
+                                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#DCDCDC" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Title}" />
+                        <DataGridTextColumn Header="Автор" Binding="{Binding Author}" />
+                        <DataGridTextColumn Header="Категория" Binding="{Binding Category}" />
+                        <DataGridTextColumn Header="Цена" Binding="{Binding Price}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</ps:BasePage>

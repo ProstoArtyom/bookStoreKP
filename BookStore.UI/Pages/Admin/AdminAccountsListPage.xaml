@@ -1,0 +1,96 @@
+﻿<ps:BasePage x:Class="BookStore.UI.Pages.Admin.AdminAccountsListPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BookStore.UI.Pages.Admin"
+             xmlns:ps="clr-namespace:BookStore.UI.Pages"
+             mc:Ignorable="d"
+             Title="AdminAccountsListPage" d:DesignHeight="600" d:DesignWidth="1000">
+    <ps:BasePage.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Century" />
+        </Style>
+    </ps:BasePage.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer.Background>
+            <SolidColorBrush Color="White" Opacity="0.8"/>
+        </ScrollViewer.Background>
+        
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center"
+                       FontSize="30" Margin="20">
+                Список учётных записей
+            </TextBlock>
+
+            <DataGrid Grid.Row="1" x:Name="AccountsDataGrid" AutoGenerateColumns="False" Margin="20"
+                      ItemsSource="{Binding Path=Accounts, Mode=OneWay}"
+                      IsReadOnly="True" ColumnWidth="*" MouseDoubleClick="AccountsGrid_OnMouseDoubleClick"
+                      RowBackground="Transparent" BorderBrush="Transparent"
+                      HorizontalGridLinesBrush="DimGray" VerticalGridLinesBrush="Gray"
+                      FontSize="16" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <DataGrid.RowHeaderStyle>
+                    <Style TargetType="DataGridRowHeader">
+                        <Setter Property="Background" Value="DimGray" />
+                        <Setter Property="Foreground" Value="Black" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Padding" Value="5" />
+                    </Style>
+                </DataGrid.RowHeaderStyle>
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="DimGray" />
+                        <Setter Property="Foreground" Value="GhostWhite" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="FontFamily" Value="Century Gothic" />
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Padding" Value="5" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="DataGridCell">
+                                    <Border Padding="{TemplateBinding Padding}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            Background="{TemplateBinding Background}"
+                                            SnapsToDevicePixels="True">
+                                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                <Setter Property="Background" Value="#DCDCDC" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding IdUser}" Width="Auto"/>
+                    <DataGridTextColumn Header="Логин" Binding="{Binding Login}" />
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Surname}" />
+                    <DataGridTextColumn Header="Электронная почта" Binding="{Binding Email}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </ScrollViewer>
+</ps:BasePage>

@@ -1,0 +1,19 @@
+﻿<ws:BaseWindow x:Class="BookStore.UI.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:ws="clr-namespace:BookStore.UI.Windows"
+       mc:Ignorable="d"
+       Title="Главное окно" MinHeight="800" MinWidth="1200"
+       WindowStartupLocation="CenterScreen">
+    <ws:BaseWindow.Background>
+        <ImageBrush ImageSource="../Resourses/Images/brick-background.png"
+                    Stretch="None">
+        </ImageBrush>
+    </ws:BaseWindow.Background>
+    
+    <Grid Margin="15">
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</ws:BaseWindow>

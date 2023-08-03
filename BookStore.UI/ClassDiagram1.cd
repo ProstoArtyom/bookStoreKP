@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BookStore.UI.Properties.Settings" Collapsed="true">
+    <Position X="17.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAgAAIAAAAAABAAACACAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.Controls.NumericTextBoxControl" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAgCAAAAAA=</HashCode>
+      <FileName>Controls\NumericTextBoxControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.HelperClasses.Commands.AboutCommand" BaseTypeListCollapsed="true">
+    <Position X="16" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HelperClasses\Commands\AboutCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.HelperClasses.ByteArrayToImageSourceConverter" BaseTypeListCollapsed="true">
+    <Position X="16" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HelperClasses\ByteArrayToImageSourceConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.HelperClasses.LastSession">
+    <Position X="5.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>HelperClasses\LastSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.HelperClasses.PagesNavigation">
+    <Position X="21.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAIAAQAAAAAAIAAEAAAABAAgBEAAAAAAAAA=</HashCode>
+      <FileName>HelperClasses\PagesNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.HelperClasses.WindowsNavigation">
+    <Position X="5.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HelperClasses\WindowsNavigation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminAccountInfoPage">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAIAQAAQCAAAAIADEAAAAQAAAAABAAAAEAABAA=</HashCode>
+      <FileName>Pages\Admin\AdminAccountInfoPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminAccountsListPage">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAACAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\AdminAccountsListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminAddBookPage">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\AdminAddBookPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminAnalysisPage">
+    <Position X="3.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\AdminAnalysisPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminAuthPage">
+    <Position X="9" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAIAA=</HashCode>
+      <FileName>Pages\Admin\AdminAuthPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminBookPage">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAACIAQAAAAAAAAAACEAAAAQAAAAQAAAAAEAAAAA=</HashCode>
+      <FileName>Pages\Admin\AdminBookPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminBooksListPage">
+    <Position X="9" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAgAAQAAAAQAgAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\AdminBooksListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminMainPage">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAIAAACQAAAgAEAAAAAASDAAA=</HashCode>
+      <FileName>Pages\Admin\AdminMainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Admin.AdminOrdersListPage">
+    <Position X="9" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Pages\Admin\AdminOrdersListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Authorization.RegisterUserAuthPage">
+    <Position X="14.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAEAIAAAAIAAAAAAAABAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Authorization\RegisterUserAuthPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.Authorization.UserAuthPage">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAQAAAAAAAAACAAAAAAACAAAAAAQAACgAAA=</HashCode>
+      <FileName>Pages\Authorization\UserAuthPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.BookPage">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Pages\User\BookPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.BooksListPage">
+    <Position X="14.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAgAAQAAAAQAgAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\User\BooksListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.CartPage">
+    <Position X="3.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAgBAAEAAAAQAACAIEAAQBAAAAAEgAAAAAACA=</HashCode>
+      <FileName>Pages\User\CartPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.OrderPage">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQKAAAAAAAAABAACAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\User\OrderPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.OrdersListPage">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Pages\User\OrdersListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.ProfilePage">
+    <Position X="2" Y="7" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="BookStore.UI.Pages.User.ProfilePage.StringValidHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Pages\User\ProfilePage.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAhACAAEAACAACAAAAIACEAAAAQAAAAABAAAAEAAAAA=</HashCode>
+      <FileName>Pages\User\ProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.User.UserMainPage">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAIAAQAAAAAAAAAEAQAAAgAAAEAAAAACIAA=</HashCode>
+      <FileName>Pages\User\UserMainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Pages.BasePage">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\BasePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.AdminAccountInfoViewModel" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCIAAAACAAQAAAIABAAAQAhgAAAAACAAAQIAAEABE=</HashCode>
+      <FileName>ViewModels\AdminAccountInfoViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.AdminAccountsViewModel" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAQAAAIAAAAQAAgAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminAccountsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.AdminAnalysisViewModel" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="BookStore.UI.ViewModels.AdminAnalysisViewModel.DataItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\AdminAnalysisViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACQAQACAAEEQCAAAIiAiAQAAggAAQIAAAAAABAIAAAE=</HashCode>
+      <FileName>ViewModels\AdminAnalysisViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.BookPageViewModel" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACBAYAgBEBEoAAAAAQAgwAAQBAABACAAAAACAA=</HashCode>
+      <FileName>ViewModels\BookPageViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.CartPageViewModel" BaseTypeListCollapsed="true">
+    <Position X="23" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAIEAAAABAgAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\CartPageViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.OrderPageViewModel">
+    <Position X="7.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACGAQAAAAAAAIEAAQAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\OrderPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.ProfileViewModel" BaseTypeListCollapsed="true">
+    <Position X="23" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="BookStore.UI.ViewModels.ProfileViewModel.DataItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\ProfileViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAKCCAAAAIgAAAQQAhgAAAAQAAAAAIEIEABE=</HashCode>
+      <FileName>ViewModels\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BookStore.UI.ViewModels.UserAuthViewModel">
+    <Position X="16" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserAuthViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.Windows.AuthWindow">
+    <Position X="13.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\AuthWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.Windows.BaseWindow">
+    <Position X="10.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\BaseWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.Windows.Splash">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\Splash.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BookStore.UI.App">
+    <Position X="16" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.AppUser">
+    <Position X="16" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAgAAAAAAAAAAAAACQAAQAAAgAAA=</HashCode>
+      <FileName>AppUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookStore.UI.MainWindow">
+    <Position X="11.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

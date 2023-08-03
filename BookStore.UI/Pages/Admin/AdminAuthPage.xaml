@@ -1,0 +1,77 @@
+﻿<ps:BasePage x:Class="BookStore.UI.Pages.Admin.AdminAuthPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ps="clr-namespace:BookStore.UI.Pages"
+             mc:Ignorable="d"
+             Title="AdminAuthPage" d:DesignHeight="450" d:DesignWidth="400">
+    <ps:BasePage.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Gray" />
+            <Setter Property="FontFamily" Value="Ink Free" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+    </ps:BasePage.Resources>
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="1" FontFamily="Century"
+               FontSize="30" HorizontalAlignment="Center"
+               Margin="0, 20">
+            БелКнига
+        </Label>
+
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0">Password</TextBlock>
+                    <PasswordBox Grid.Row="1" Height="30" x:Name="PasswordPb">
+                        <PasswordBox.ToolTip>
+                            <ToolTip>Здесь вводится пароль администратора.</ToolTip>
+                        </PasswordBox.ToolTip>
+                    </PasswordBox>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="15"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0"
+                            FontWeight="Bold"
+                            Click="LoginBtn_Click">Log in</Button>
+
+                    <Button Grid.Row="0" Grid.Column="2"
+                            FontWeight="Bold"
+                            Click="BackBtn_Click">Back</Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</ps:BasePage>

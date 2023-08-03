@@ -1,0 +1,126 @@
+﻿<ps:BasePage x:Class="BookStore.UI.Pages.Admin.AdminMainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BookStore.UI.Pages.Admin"
+             xmlns:ps="clr-namespace:BookStore.UI.Pages"
+             mc:Ignorable="d"
+             Title="AdminMainPage" d:DesignHeight="800" d:DesignWidth="1200">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Height" Value="40" />
+                    <Setter Property="Margin" Value="5" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="Width" Value="Auto" />
+                </Style>
+                
+                <Style TargetType="TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                    <Setter Property="Foreground" Value="GhostWhite" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Setter Property="FontFamily" Value="Century" />
+                    <Setter Property="FontSize" Value="16" />
+                </Style>
+            </Grid.Resources>
+            
+            <Grid.Background>
+                <SolidColorBrush Color="CornflowerBlue" Opacity="0.8"></SolidColorBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="20">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="Margin" Value="5" />
+                        <Setter Property="Width" Value="80" />
+                    </Style>
+                </StackPanel.Resources>
+
+                <Image HorizontalAlignment="Center" Height="50" Source="../../Resourses/Icons/books.png" />
+                <TextBlock HorizontalAlignment="Center" FontFamily="Century"
+                           Foreground="GhostWhite" FontWeight="Bold" FontSize="30">
+                    БелКнига
+                </TextBlock>
+                <Label HorizontalAlignment="Center" FontSize="14"
+                       Foreground="GhostWhite">
+                    Рай книжного червя
+                </Label>
+                <Separator Background="GhostWhite"></Separator>
+
+                <Button Click="HomeBtn_Click">
+                    <StackPanel>
+                        <Image Source="../../Resourses/Icons/book.png" />
+                        <TextBlock>Books</TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="AccountsBtn_Click">
+                    <StackPanel>
+                        <Image Source="../../Resourses/Icons/profile.png" />
+                        <TextBlock>Accounts</TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="OrdersBtn_Click">
+                    <StackPanel>
+                        <Image Source="../../Resourses/Icons/orders.png" />
+                        <TextBlock>Orders</TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="AnalysisBtn_Click">
+                    <StackPanel>
+                        <Image Source="../../Resourses/Icons/analysis.png" />
+                        <TextBlock>Analysis</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <Grid Grid.Row="2" Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Button Grid.Row="0" Click="AddBookBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Margin" Value="10" />
+                            <Setter Property="Width" Value="80" />
+                        </Style>
+                    </Button.Resources>
+                    
+                    <StackPanel>
+                        <Image Source="../../Resourses/Icons/plus.png" />
+                        <TextBlock>Add Book</TextBlock>
+                    </StackPanel>
+                </Button>
+                
+                <Button Grid.Row="1" FontSize="16" Content="Logout" Background="Brown" Click="LogoutBtn_Click">
+                    <Button.ToolTip>
+                        <ToolTip>Выход из учётной записи</ToolTip>
+                    </Button.ToolTip>
+                </Button>
+            </Grid>
+        </Grid>
+
+        <Frame Grid.Column="1" Name="BooksFrame" NavigationUIVisibility="Hidden" />
+    </Grid>
+</ps:BasePage>

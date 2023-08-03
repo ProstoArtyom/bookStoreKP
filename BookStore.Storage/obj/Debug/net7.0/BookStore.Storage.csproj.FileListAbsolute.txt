@@ -1,0 +1,12 @@
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\bin\Debug\net7.0\BookStore.Storage.deps.json
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\bin\Debug\net7.0\BookStore.Storage.dll
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\bin\Debug\net7.0\BookStore.Storage.pdb
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.csproj.AssemblyReference.cache
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.AssemblyInfoInputs.cache
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.AssemblyInfo.cs
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.csproj.CoreCompileInputs.cache
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.dll
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\refint\BookStore.Storage.dll
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\BookStore.Storage.pdb
+C:\Users\artyo\source\repos\BookStore_KP\BookStore.Storage\obj\Debug\net7.0\ref\BookStore.Storage.dll
